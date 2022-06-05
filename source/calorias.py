@@ -17,7 +17,6 @@ class Calorias(object):
         """
         self.quantity = initial_amount
 
-
     """
     Moving on to the methods we plan to implement, we test that the add_calories method correctly increments the balance with the added amount. 
     On the other hand, we are also ensuring that the spend_calories method reduces the amount by the spent amount and that we can’t spend more calories 
@@ -25,7 +24,7 @@ class Calorias(object):
 
     def spend_calories(self, amount):
         if self.quantity < amount:
-            raise InsufficientAmount('Not enough available calories to run this distance {}'.format(amount))
+            raise InsufficientAmount('No puedes gastar mas calorias de las que tienes')
         self.quantity -= amount
 
     def add_calories(self, amount):
